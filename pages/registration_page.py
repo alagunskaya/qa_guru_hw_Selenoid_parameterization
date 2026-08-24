@@ -96,6 +96,8 @@ class RegistrationPage(BasePage):
             first_option = (By.XPATH,
                             f"//div[contains(@class, 'subjects-auto-complete__option') and text()='{subject}']")
             self.wait.until(EC.visibility_of_element_located(first_option))
+            element = self.find_element(first_option)
+            self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
             self.click_element(first_option)
         self.driver.execute_script("arguments[0].blur();", input_subject)
 
