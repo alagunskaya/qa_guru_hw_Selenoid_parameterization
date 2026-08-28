@@ -19,7 +19,7 @@ def driver(request):
     # Получаем все параметры
     use_selenoid = request.config.getoption("--selenoid", default=False)
     browser = request.config.getoption("--browser", default="chrome")
-    browser_version = request.config.getoption("--browser_version", default="latest")
+    browser_version = request.config.getoption("--browser_version", default="154.0")
     headless = request.config.getoption("--headless", default=False)
     width = request.config.getoption("--window_width", default="1920")
     height = request.config.getoption("--window_height", default="1080")
