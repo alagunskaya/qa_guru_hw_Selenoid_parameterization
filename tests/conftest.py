@@ -91,7 +91,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--browser_version",
         action="store",
-        default="latest",
+        default="151.0",
         help="Browser version"
     )
     parser.addoption(
